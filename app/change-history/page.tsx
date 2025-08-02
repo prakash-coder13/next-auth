@@ -1,4 +1,3 @@
-import ChangeLog from "@/components/change-log"
 import Code from "@/components/code-block";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import changelog from "@/data/changelog";
@@ -35,8 +34,8 @@ const ChangeHistoryPage = () => {
 
         <div>
             For adding a change log i have already created this route at /change-history by
-            creating a subfolder 'change-history' inside the 'app' folder and then adding a page.tsx file which
-            exports a functional component that Next js will render as the output when the route '/change-history' is accessed.
+            creating a subfolder change-history inside the 'app' folder and then adding a page.tsx file which
+            exports a functional component that Next js will render as the output when the route /change-history is accessed.
             This is the file based routing which is very convinient as I can see.
         </div>
 
