@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       
       <div >
         <div className="text-white text-2xl">
-           bit-a-little
+          bit<span className="text-sm">&#9632;</span>a<span className="text-sm">&#9632;</span>little
         </div>
       </div>
       <div className="flex  gap-4">
