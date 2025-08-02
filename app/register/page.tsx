@@ -2,10 +2,8 @@
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -50,7 +48,7 @@ const Register = () => {
         <CardHeader>
           <CardTitle>Register</CardTitle>
 
-          <CardDescription>Let's get you registered.</CardDescription>
+          <CardDescription>Let&apos;s get you registered.</CardDescription>
         </CardHeader>
         <CardContent>
           <Form {...form}>
