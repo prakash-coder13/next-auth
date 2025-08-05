@@ -10,9 +10,9 @@ const CalculatorPage = () => {
   const equal = "=";
   const [screen, setScreen] = useState("0");
   const [isOpExpected, setIsOpExpected] = useState(false);
-  interface ClickHandlerEvent extends React.MouseEvent<HTMLButtonElement> {}
+
   const [theStack, setTheStack] = useState<string[]>([]);
-  const clickHandler = (e: ClickHandlerEvent): void => {
+  const clickHandler = (e: React.MouseEvent<HTMLButtonElement>): void => {
     setIsOpExpected(true);
     const value = e.currentTarget.value;
     setScreen((prev) => {
@@ -79,7 +79,7 @@ const CalculatorPage = () => {
   return (
     <>
       <div>STACK {theStack.length}</div>
-      
+
       <div className={styles.container}>
         <div className="appname">A Simple Calculator</div>
         <div className={styles.calculator}>
