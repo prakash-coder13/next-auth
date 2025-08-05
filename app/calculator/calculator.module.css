@@ -1,0 +1,114 @@
+.container{
+    min-width: 800px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #00FFDE;
+    min-width: 320px;
+    min-height: 320px;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    margin: 1rem auto;
+    min-height: 540px;
+    min-width: 420px;
+    max-width: 420px;
+    background: #00CAFF;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.calculator .screen{
+    min-height: 120px;
+    max-height: 120px;
+    background: #fff;
+    flex-grow: 1;
+    font-size: 24px;
+    font-weight: bold;
+    padding:1rem;
+}
+.calculator .screen .expression{
+    overflow:hidden;
+    max-width: 100%;
+    
+}
+.calculator .inputs{
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    
+}
+.calculator .inputs .top {
+    display: flex;
+    height: 25%;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem;
+
+}
+
+.calculator .inputs .bottom{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.calculator .inputs .bottom .left{
+    width: 75%;
+}
+.calculator .inputs .bottom .left {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:1rem;
+   
+}
+
+.calculator .inputs .bottom .left .btn{
+    border-radius: 0;
+    min-height:64px;
+    background-color: #4300FF;
+    box-shadow: 1px 2px 2px 0.1 black;
+    cursor: pointer;
+    color: #FFF;
+}
+
+
+.calculator .inputs .bottom .right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem .75rem;
+    
+
+}
+
+
+.calculator .inputs .bottom .right .btn{
+    border-radius: 0;
+    min-height:64px;
+    background-color: #0065F8;
+    box-shadow: 1px 2px 2px 0.1 black;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.btn{
+    min-height:48px;
+    border-radius: 0;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 2px 0.1 black;
+    cursor: pointer;
+    background-color: #F49BAB;
+    color: #000;
+    margin: 0 4px;
+}
+
