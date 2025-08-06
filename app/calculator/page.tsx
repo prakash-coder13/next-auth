@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./calculator.module.css";
 
 const CalculatorPage = () => {
@@ -10,8 +10,17 @@ const CalculatorPage = () => {
   const equal = "=";
   const [screen, setScreen] = useState("0");
   const [isOpExpected, setIsOpExpected] = useState(false);
+  const [isDotExpected, setIsDotExpected] = useState<boolean>(true);
 
   const [theStack, setTheStack] = useState<string[]>([]);
+
+  useEffect(
+    ()=>{
+        const expectDot = theStack.length === 0 || (theStack.length > 0 && !theStack.includes("."));
+        console.log("Expect Dot ? ", expectDot);
+        setIsDotExpected(expectDot);
+    }, [theStack]
+  )
   const clickHandler = (e: React.MouseEvent<HTMLButtonElement>): void => {
     setIsOpExpected(true);
     const value = e.currentTarget.value;
@@ -28,6 +37,7 @@ const CalculatorPage = () => {
       }
     });
   };
+
 
   const opHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     setIsOpExpected(false);
@@ -117,7 +127,7 @@ const CalculatorPage = () => {
                     </Button>
                   );
                 })}
-                <Button className={styles.btn} value="." onClick={clickHandler}>
+                <Button className={styles.btn} value="." onClick={clickHandler} disabled={!isDotExpected}>
                   {dot}
                 </Button>
                 <Button className={styles.btn} value="=" onClick={calculate}>
