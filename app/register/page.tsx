@@ -43,7 +43,7 @@ const Register = () => {
     })
   };
   return (
-    <main className=" flex flex-col gap-8 justify-center items-center min-h-screen">
+    <main className=" flex flex-col gap-8 justify-center items-center min-h-[500px]">
       <Card className="w-[350px] min-w-[350px]">
         <CardHeader>
           <CardTitle>Register</CardTitle>

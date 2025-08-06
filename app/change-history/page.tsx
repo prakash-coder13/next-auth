@@ -16,7 +16,8 @@ const ChangeHistoryPage = () => {
   );
   return (
     <>
-      <div>
+      <div className="p-8">
+        <div>
         <h1>Change History</h1>
         <p>This page will display the change history of the application.</p>
       </div>
@@ -68,6 +69,7 @@ const ChangeHistoryPage = () => {
           </Card>
         );
       })}
+      </div>
     </>
   );
 };

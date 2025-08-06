@@ -1,23 +1,23 @@
 import Link from "next/link";
 
-
 export default function Home() {
+  const availablePages: { href: string; text: string }[] = [
+    { href: "/calculator", text: "Calculator" },
+    { href: "/register", text: "Sign Up/Register" },
+    { href:"/change-history",text: "Change Log"}
+  ];
   return (
     <>
-    <div className="flex justify-between bg-gray-900 p-4 gap-4">
-      
-      <div >
-        <div className="text-white text-2xl">
-          bit<span className="text-sm">&#9632;</span>a<span className="text-sm">&#9632;</span>little
-        </div>
+      <div className="flex flex-col  w-screen  text-center gap:8 mt-10 justify-center align-center">
+        <div className="text-2xl mb-10"> Available Pages</div>
+        {availablePages.map((page) => {
+          return (
+            <Link key={page.href} href={page.href}>
+              {page.text}
+            </Link>
+          );
+        })}
       </div>
-      <div className="flex  gap-4">
-        <Link className="text-blue-500" href="/change-history">Change Log</Link>
-       <Link className="text-blue-500 " href="/register">Register</Link>
-      </div>
-    </div>
-    <div>Hello there</div>
     </>
-   
   );
 }
