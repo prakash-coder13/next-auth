@@ -1,0 +1,27 @@
+.expandable {
+  background-color: #a7b49e;
+  min-width: 450px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+  }
+  .body {
+    overflow: hidden;
+    background-color: #e2e0c8;
+    color: #000;
+    max-height: 0;
+    opacity: 0;
+  }
+  .expanded  {
+    opacity: 1;
+    max-height: 120px;
+    padding: 1rem; 
+  }
+
+  .collapsed  {
+    max-height: 0;
+  }
+}
