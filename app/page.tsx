@@ -4,8 +4,10 @@ export default function Home() {
   const availablePages: { href: string; text: string }[] = [
     { href: "/calculator", text: "Calculator" },
     { href: "/register", text: "Sign Up/Register" },
-    { href: "/components", text: "Various Components"},
-    { href:"/change-history",text: "Change Log"}
+    { href: "/components", text: "Various Components" },
+    { href: "/change-history", text: "Change Log" },
+    { href: "provider", text: "Provider Demo" },
+    { href: "/tic-tac-toe", text: " Tic Tac Toe " },
   ];
   return (
     <>
