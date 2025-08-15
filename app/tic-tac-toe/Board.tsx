@@ -55,40 +55,47 @@ const Board = () => {
 
   return (
     <>
-      {gameOver ? (
-        <div className={styles.info}>
-          Game Over{" "}
-          {winner ? (
-            <span className={styles["winner-msg"]}>
-              {winner} WINS!! &#128526;
-            </span>
-          ) : (
-            <div>&#128517; It is a tie!</div>
-          )}
-        </div>
-      ) : (
-        <div className={styles.info}>Next Player : {nextPlayer}</div>
-      )}
+      <div className={styles["game-container"]}>
+        <h1 className={styles["board-title"]}>Let&apos;s Play Tic Tac Toe</h1>
+        {gameOver ? (
+          <div className={styles.info}>
+            Game Over{" "}
+            {winner ? (
+              <span className={styles["winner-msg"]}>
+                Player {winner} wins!! 🎉
+              </span>
+            ) : (
+              <div> 🤝 It is a tie!</div>
+            )}
+          </div>
+        ) : (
+          <div className={styles.info}>Next Player : {nextPlayer}</div>
+        )}
 
-      <div className={styles.board}>
-        {boardState.map((v, index) => {
-          return (
-            <button
-              key={index}
-              className={styles.cell}
-              value={v}
-              disabled={!!v || gameOver}
-              onClick={() => handleClick(index)}
-            >
-              {v}
-            </button>
-          );
-        })}
-      </div>
-      <div className={styles["button-wrapper"]}>
-        <button className={styles.reset} onClick={resetBoard}>
-          Reset Board
-        </button>
+        <div className={styles.board}>
+          {boardState.map((v, index) => {
+            return (
+              <button
+                key={index}
+                className={`${styles.cell} ${
+                  boardState[index]
+                    ? styles["cell-".concat(boardState[index])]
+                    : ""
+                }`}
+                value={v}
+                disabled={!!v || gameOver}
+                onClick={() => handleClick(index)}
+              >
+                {v}
+              </button>
+            );
+          })}
+        </div>
+        <div className={styles["button-wrapper"]}>
+          <button className={styles.reset} onClick={resetBoard}>
+            Reset Board
+          </button>
+        </div>
       </div>
     </>
   );
