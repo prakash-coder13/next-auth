@@ -2,14 +2,13 @@
 import { useMemo, useState } from "react";
 import styles from "./use-memo-demo.module.scss";
 import { initialItems } from "./utlls";
-interface DemoProps {}
-const UseMemoDemo = ({}: DemoProps) => {
+
+const UseMemoDemo = () => {
   const snippet = `"use client";
 import { useMemo, useState } from "react";
 import styles from "./use-memo-demo.module.scss";
 import { initialItems } from "./utlls";
-interface DemoProps {}
-const UseMemoDemo = ({}: DemoProps) => {
+const UseMemoDemo = () => {
   const [count, setCount] = useState(0);
   const [items] = useState(initialItems);
     //WE HAVE useMemo HERE, without it , react will call it everytime when any state change that triggers re render 
