@@ -7,7 +7,9 @@ export default function Home() {
     { href: "/components", text: "Various Components" },
     { href: "/change-history", text: "Change Log" },
     { href: "provider", text: "Provider Demo" },
-    { href: "/tic-tac-toe", text: " Tic Tac Toe " },
+    { href: "/tic-tac-toe", text: "Tic Tac Toe" },
+    { href: "/usememo", text: "useMemo Demo" },
+    { href: "/usecallback", text: "useCallback Demo" },
   ];
   return (
     <>

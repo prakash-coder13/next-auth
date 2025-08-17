@@ -1,0 +1,30 @@
+.container {
+  padding: 2rem;
+  display: flex;
+  border: 1px solid;
+  min-height: 120px;
+  flex-direction: column;
+
+  button {
+    padding: 0.15rem;
+    border: 1px solid;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: aliceblue;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+    &:hover {
+      background-color: aqua;
+    }
+  }
+}
+.code-wrapper {
+  code {
+    pre {
+      background-color: #000;
+      color: #fff;
+      padding: 0.5rem;
+    }
+  }
+}
